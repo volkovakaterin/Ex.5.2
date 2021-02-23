@@ -5,7 +5,13 @@
 class Character {
   constructor(name, type, health, level, attack, defence) {
     this.name = name;
+    if (typeof this.name !== 'string' || this.name.length < 2 || this.name.length > 10) {
+      throw new Error('Ошибка');
+    }
     this.type = type;
+    if (this.type !== 'Bowman' && this.type !== 'Swordsman' && this.type !== 'Magician' && this.type !== 'Daemon' && this.type !== 'Undead' && this.type !== 'Zombie') {
+      throw new Error('Ошибка');
+    }
     this.health = health;
     this.level = level;
     this.attack = attack;
@@ -34,6 +40,6 @@ class Character {
 export const Bowman = new Character('Bowman', 'Bowman', 100, 1, 25, 25);
 export const Swordsman = new Character('Swordsman', 'Swordsman', 0, 1, 40, 10);
 export const Magician = new Character('Magician', 'Magician', -5, 1, 10, 40);
-const Daemon = new Character('Daemon', 'Daemon', 100, 1, 10, 40);
+export const Daemon = new Character('D', 'Daemon', 100, 1, 10, 40);
 const Undead = new Character('Undead', 'Undead', 100, 1, 25, 25);
 const Zombie = new Character('Zombie', 'Zombie', 100, 1, 40, 10);
