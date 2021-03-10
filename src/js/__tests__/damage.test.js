@@ -1,7 +1,8 @@
-/* eslint-disable linebreak-style */
+/* eslint-disable linebreak-style 
 import { Bowman, Swordsman, Magician } from '../class';
 
 test('damage', () => {
+  const bowman = new Bowman('Bowman');
   const Bowman1 = {
     name: 'Bowman',
     type: 'Bowman',
@@ -33,4 +34,4 @@ test('damage1', () => {
     defence: 40,
   };
   expect(Magician.damage(15)).toEqual(Magician1);
-});
+});*/

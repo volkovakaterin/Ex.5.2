@@ -1,7 +1,7 @@
 /* eslint-disable linebreak-style */
+/* eslint-disable max-classes-per-file */
 /* eslint-disable no-unused-vars */
 /* eslint-disable no-mixed-operators */
-/* eslint-disable linebreak-style */
 class Character {
   constructor(name, type, health, level, attack, defence) {
     this.name = name;
@@ -17,7 +17,6 @@ class Character {
     this.attack = attack;
     this.defence = defence;
   }
-
 
   // eslint-disable-next-line consistent-return
   levelUp() {
@@ -36,10 +35,33 @@ class Character {
   }
 }
 
-// eslint-disable-next-line import/prefer-default-export
-export const Bowman = new Character('Bowman', 'Bowman', 100, 1, 25, 25);
-export const Swordsman = new Character('Swordsman', 'Swordsman', 0, 1, 40, 10);
-export const Magician = new Character('Magician', 'Magician', -5, 1, 10, 40);
-export const Daemon = new Character('D', 'Daemon', 100, 1, 10, 40);
-const Undead = new Character('Undead', 'Undead', 100, 1, 25, 25);
-const Zombie = new Character('Zombie', 'Zombie', 100, 1, 40, 10);
+export class Bowman extends Character {
+  constructor(name, type, health, level, attack, defence) {
+    super(name, 'Bowman', 0, 1, 25, 25);
+  }
+}
+export class Swordsman extends Character {
+  constructor(name, type, health, level, attack, defence) {
+    super(name, 'Swordsman', -5, 1, 40, 10);
+  }
+}
+export class Magician extends Character {
+  constructor(name, type, health, level, attack, defence) {
+    super(name, 'Magician', 100, 1, 10, 40);
+  }
+}
+export class Daemon extends Character {
+  constructor(name, type, health, level, attack, defence) {
+    super(name, 'Daemon', 100, 1, 10, 40);
+  }
+}
+export class Undead extends Character {
+  constructor(name, type, health, level, attack, defence) {
+    super(name, 'Undead', 100, 1, 25, 25);
+  }
+}
+export class Zombie extends Character {
+  constructor(name, type, health, level, attack, defence) {
+    super(name, 'Zombie', 100, 1, 40, 10);
+  }
+}
