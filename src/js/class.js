@@ -20,7 +20,7 @@ class Character {
 
   // eslint-disable-next-line consistent-return
   levelUp() {
-    if (this.health !== 0) {
+    if (this.health > 0) {
       this.level += 1;
       this.attack += (this.attack / 100 * 25);
       this.defence += (this.defence / 100 * 25);
@@ -36,32 +36,32 @@ class Character {
 }
 
 export class Bowman extends Character {
-  constructor(name, type, health, level, attack, defence) {
+  constructor(name) {
     super(name, 'Bowman', 0, 1, 25, 25);
   }
 }
 export class Swordsman extends Character {
-  constructor(name, type, health, level, attack, defence) {
+  constructor(name) {
     super(name, 'Swordsman', -5, 1, 40, 10);
   }
 }
 export class Magician extends Character {
-  constructor(name, type, health, level, attack, defence) {
+  constructor(name) {
     super(name, 'Magician', 100, 1, 10, 40);
   }
 }
 export class Daemon extends Character {
-  constructor(name, type, health, level, attack, defence) {
+  constructor(name) {
     super(name, 'Daemon', 100, 1, 10, 40);
   }
 }
 export class Undead extends Character {
-  constructor(name, type, health, level, attack, defence) {
+  constructor(name) {
     super(name, 'Undead', 100, 1, 25, 25);
   }
 }
 export class Zombie extends Character {
-  constructor(name, type, health, level, attack, defence) {
+  constructor(name) {
     super(name, 'Zombie', 100, 1, 40, 10);
   }
 }

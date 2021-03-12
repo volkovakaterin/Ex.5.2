@@ -7,3 +7,8 @@ test('nameIf', () => {
     new Bowman('B');
   }).toThrow(Error);
 });
+test('nameIf1', () => {
+  expect(() => {
+    new Bowman('Bowman78910');
+  }).toThrow(Error);
+});
