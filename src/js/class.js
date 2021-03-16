@@ -25,7 +25,7 @@ class Character {
       this.attack += (this.attack / 100 * 25);
       this.defence += (this.defence / 100 * 25);
       this.health = 100;
-    } else { return new Error('Нельзя повысить уровень погибшего'); }
+    } else { throw new Error('Нельзя повысить уровень погибшего'); }
   }
 
   damage(points) {
@@ -52,12 +52,12 @@ export class Magician extends Character {
 }
 export class Daemon extends Character {
   constructor(name) {
-    super(name, 'Daemon', 100, 1, 10, 40);
+    super(name, 'Troll', 100, 1, 10, 40);
   }
 }
 export class Undead extends Character {
   constructor(name) {
-    super(name, 'Undead', 100, 1, 25, 25);
+    super(name, '1', 100, 1, 25, 25);
   }
 }
 export class Zombie extends Character {

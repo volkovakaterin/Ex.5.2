@@ -2,13 +2,11 @@
 import { Bowman, Swordsman } from '../class';
 
 test('damage', () => {
-  function test() {
+  expect(() => {
     const bowman = new Bowman('Bowman');
     bowman.damage(1000);
     return bowman.levelUp();
-  }
-  const expected = new Error('Нельзя повысить уровень погибшего');
-  expect(test()).toEqual(expected);
+  }).toThrow(Error);
 });
 test('damage1', () => {
   function test() {

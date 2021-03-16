@@ -2,14 +2,16 @@
 import { Bowman, Swordsman, Magician } from '../class';
 
 test('levelUp', () => {
-  const bowman = new Bowman('Bowman');
-  const Bowman1 = new Error('Нельзя повысить уровень погибшего');
-  expect(bowman.levelUp()).toEqual(Bowman1);
+  expect(() => {
+    const bowman = new Bowman('Bowman');
+    bowman.levelUp();
+  }).toThrow(Error);
 });
 test('levelUp1', () => {
-  const swordsman = new Swordsman('Swordsman');
-  const Swordsman1 = new Error('Нельзя повысить уровень погибшего');
-  expect(swordsman.levelUp()).toEqual(Swordsman1);
+  expect(() => {
+    const swordsman = new Swordsman('Swordsman');
+    swordsman.levelUp();
+  }).toThrow(Error);
 });
 test('levelUp2', () => {
   function test() {
